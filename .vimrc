@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#rc()
 
@@ -23,8 +23,11 @@ Bundle 'vim-airline/vim-airline'
 
 Bundle 'vim-airline/vim-airline-themes'
 
+
 filetype plugin indent on
-colorscheme solarized
+colorscheme gruvbox
+set background=dark
+set t_Co=256
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set tabstop=2
@@ -48,20 +51,6 @@ let g:syntastic_check_on_wq = 0
 let g:solarized_termcolors = 256
 let g:airline_theme='wombat'
 
-if fnamemodify(getcwd(), ':t') == "portal"
-  set shiftwidth=2
-  set softtabstop=2
-
-  autocmd BufWritePost * !~/pushpor.sh <afile>
-endif
-
-if fnamemodify(getcwd(), ':t') == "bpo_crm"
-  set expandtab
-  set shiftwidth=2
-  set softtabstop=2
-
-  autocmd BufWritePost * !~/pushbpo.sh <afile>
-endif
 
 function! RestoreRegister()
   let @" = s:restore_reg
