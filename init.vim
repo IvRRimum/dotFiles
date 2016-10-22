@@ -57,6 +57,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|platforms\|tmp'
 
 " Leave Terminal Mode
 :tnoremap <Esc> <C-\><C-n>
+:nnoremap <CR> G
 
 " If directory
 " if fnamemodify(getcwd(), ':t') == "minicredit.lv"
