@@ -14,6 +14,7 @@ Bundle 'leafgarland/typescript-vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'gregsexton/MatchTag'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'wikitopian/hardmode'
 
 filetype plugin indent on
 colorscheme gruvbox
@@ -55,7 +56,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|platforms\|tmp'
 :nnoremap <A-l> <C-w>l
 
 " Leave Terminal Mode
-:nnoremap <A-w> <C-\><C-n>
+:tnoremap <Esc> <C-\><C-n>
 
 " If directory
 " if fnamemodify(getcwd(), ':t') == "minicredit.lv"
@@ -91,5 +92,4 @@ hi Normal ctermbg=none
 
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
-
-
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
