@@ -57,6 +57,8 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|platforms\|tmp'
 
 " Leave Terminal Mode
 :tnoremap <Esc> <C-\><C-n>
+
+" Jump to line
 :nnoremap <CR> G
 
 " If directory
