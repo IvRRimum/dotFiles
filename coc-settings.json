@@ -1,0 +1,7 @@
+{
+  "go.goplsOptions": {
+    "verboseOutput": true
+  },
+  "python.analysis.extraPaths": [
+  ]
+}
